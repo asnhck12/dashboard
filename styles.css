@@ -1,0 +1,73 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    border: 1px;
+    border-style: double;
+    border-color: black;
+}
+
+.container {
+    display: grid;
+    height: 100%;
+    grid-template: repeat(4, 25%)/repeat(4, 25%);
+}
+
+.header {
+    background-color: rebeccapurple;
+    grid-area:1/2/2/5;
+}
+
+.sidebar {
+    grid-area: 1/1/5/2;
+    background-color: blue;
+}
+
+.main {
+    background-color: brown;
+    grid-area: 2/2/5/5;
+    border: 1px;
+    border-style: double;
+    border-color: black;
+    display: grid;
+    grid-template: repeat(4, 25%)/repeat(4, 25%);
+}
+
+.main div {
+    border: 1px;
+    border-style: double;
+    border-color: black;
+}
+
+.projects {
+    grid-area: 1/1/5/4;
+}
+
+.projectCards {
+    padding: 10px;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+    gap: 10px;
+}
+
+.announcements {
+    grid-area: 1/4/3/5;
+}
+
+.trending {
+    grid-area: 3/4/5/5;
+}
+
+.icons {
+    bottom: 0px;
+    right: 0px;
+    
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 15px;
+}
