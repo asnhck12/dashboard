@@ -2,13 +2,13 @@ html, body {
     height: 100%;
     width: 100%;
     margin: 0;
-
 }
 
 .container {
     display: grid;
     height: 100%;
-    grid-template: repeat(4, 25%)/repeat(4, 25%);
+    /* grid-template: repeat(4, 25%)/repeat(4, 25%); */
+    grid-template: 15% repeat(3, 1fr)/repeat(4, 1fr);
 }
 
 .header {
@@ -16,20 +16,21 @@ html, body {
     grid-area:1/2/2/5;
     display: grid;
     grid-template: 1fr 1fr/ auto auto; 
+    padding: 0;
 }
 
 .upperHeader {
     grid-area: 1/1/2/3;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    
+    grid-template-columns: 3fr 1fr;
+    padding: 0; 
 }
 
 .lowerHeader {
     grid-area: 2/1/3/3;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    
+    grid-template-columns: 1fr 2fr;
+    padding: 0;    
 }
 
 .sidebar {
@@ -39,29 +40,66 @@ html, body {
     padding-left: 7%;
 }
 
+.search {
+    padding-left: 3%;   
+    place-self: center left;
+}
+
+.search input {
+    width: 95%;
+}
+
+.topRight {
+    place-self: center right;
+    padding-right: 5%;
+}
 
 .main {
     background-color: #cbd5e1;
     grid-area: 2/2/5/5;
     display: grid;
-    grid-template: repeat(4, 25%)/repeat(4, 25%);
+    grid-template: repeat(4, 25%)/repeat(4, 25%); 
 }
 
+.mainRight {
+    grid-area: 1/4/5/5;
+    /* height: 100%; */
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    place-self: center;
+    gap: 2%;
+}
+
+.mainRight h1 {
+    padding: 5px;
+}
+
+.main h1 {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.buttons {
+    padding-right: 5%;
+    place-self: center right;
+}
+
+.projects h1 {
+    padding: 2%;
+ }
 
 .projects {
     grid-area: 1/1/5/4;
-    width: 100%;
-    height: 100%;
     display: grid;
-    grid-template: 1fr 10fr/ auto;
+    grid-template-rows: 5% 95%;
 }
 
 .projectCards {
     display:grid;
     grid-template: 1fr 1fr 1fr/ auto auto;
-    padding: 20px;
-    gap: 30px;
-
+    padding: 3%;
+    gap: 3%;
 }
 
 .projectCard, .announcementCard, .trendingCard {
@@ -73,6 +111,11 @@ html, body {
     grid-area: 1/4/3/5;
 }
 
+.welcomeCard {
+    place-self: center left;
+    padding-left: 5%;
+}
+
 .trending {
     grid-area: 3/4/5/5;
 }
@@ -80,15 +123,23 @@ html, body {
 .icons {
     bottom: 0px;
     right: 0px;
-    
+    border: 1px;
+    border-style: solid;
+    border-color: black;   
 }
 
 h1 {
     font-size: 20px;
+    padding: 1%;
+
 }
 
 h2 {
     font-size: 15px;
+}
+
+h3 {
+    font-size: 10px;
 }
 
 p {
