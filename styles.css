@@ -7,8 +7,7 @@ html, body {
 .container {
     display: grid;
     height: 100%;
-    /* grid-template: repeat(4, 25%)/repeat(4, 25%); */
-    grid-template: 15% repeat(3, 1fr)/repeat(4, 1fr);
+    grid-template: 15% repeat(3, 1fr)/25% repeat(3, 1fr);
 }
 
 .header {
@@ -30,8 +29,12 @@ html, body {
 .lowerHeader {
     grid-area: 2/1/3/3;
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    padding: 0;    
+    grid-template-columns: 1fr 1fr;
+    padding: 0; }
+
+.lowerHeader div {
+    border: 2px black;
+    border-style:solid;
 }
 
 .sidebar {
@@ -39,15 +42,27 @@ html, body {
     background-color: #2563eb;
     color: white;
     padding-left: 7%;
+    display: flex;
+    flex-flow: column;
+    gap: 1%;
 }
 
 .search {
-    padding-left: 3%;   
+    padding-left: 1px;   
     place-self: center left;
+    display: flex;
+    flex-flow: row;
+    gap: 10%;
+    width: 100%;
 }
 
 .search input {
-    width: 95%;
+    width: 350px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+
 }
 
 .topRight {
@@ -67,23 +82,21 @@ html, body {
     height: 100%;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    gap: 4%;
+    gap: 8%;
     padding: 2%;
+    height: 100%;
 }
 
-/* .mainRight div {
-    padding-top: 5px;
-} */
+.mainRightSection {
+    display: grid;
+    grid-template-rows: 10% 1fr;
+    padding-bottom: 10%;
+}
 
 .main h1 {
     text-align: left;
     margin: 0;
     padding: 0;
-}
-
-.buttons {
-    padding-right: 5%;
-    place-self: center right;
 }
 
 button {
@@ -92,6 +105,11 @@ button {
     width: 90px;
     height: 30px;
     border-radius: 30px;
+}
+
+.buttons {
+    place-self: center right;
+    padding-right: 5%;
 }
 
 .projects h1 {
@@ -116,23 +134,19 @@ button {
     border-color: orange;
 }
 
+.projectCard div {
+    justify-items: bottom;
+}
+
 .projectCard, .announcementCard, .trendingCard {
     background-color: white;
     padding: 7%;
     border-radius: 7px;
 }
 
-.welcomeCard {
-    place-self: center left;
-    padding-left: 5%;
-}
-
 .icons {
-    bottom: 0px;
-    right: 0px;
-    border: 1px;
-    border-style: solid;
-    border-color: black;   
+    justify-items: end;
+
 }
 
 h1 {
@@ -149,6 +163,41 @@ h3 {
     font-size: 25px;
 }
 
+.lhName {
+    font-size: 15px;
+    font-weight: 600;
+}
+
 p {
     font-size: 10px;
+}
+
+.pagesLink p {
+    font-size: larger;
+    font-weight: 700;
+}
+
+.sidebar img {
+    vertical-align: middle;
+    padding-right: 5%;
+}
+
+.settingsSection p {
+    font-size: larger;
+    font-weight: 700;
+}
+
+.userImage {
+    height: 40px;
+    width: 40px;
+}
+
+.userImageLarge {
+    height: 80px;
+    width: 80px;
+}
+
+.welcomeCard {
+    display: grid;
+    grid-template-columns: 90px 1fr;
 }
