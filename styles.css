@@ -23,7 +23,7 @@ html, body {
     grid-area: 1/1/2/3;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    padding: 0; 
+    padding-left: 0; 
 }
 
 .lowerHeader {
@@ -32,10 +32,6 @@ html, body {
     grid-template-columns: 1fr 1fr;
     padding: 0; }
 
-.lowerHeader div {
-    border: 2px black;
-    border-style:solid;
-}
 
 .sidebar {
     grid-area: 1/1/5/2;
@@ -49,25 +45,30 @@ html, body {
 
 .search {
     padding-left: 1px;   
-    place-self: center left;
-    display: flex;
-    flex-flow: row;
-    gap: 10%;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    padding-left: 3%;
+    align-items: center;
+    gap: 1%;
+    
 }
 
 .search input {
-    width: 350px;
+    width: 90%;
     border-radius: 10px;
     border-style: solid;
     border-color: black;
     border-width: 1px;
-
+    place-items: center left;
 }
 
 .topRight {
     place-self: center right;
-    padding-right: 5%;
+    padding-right: 8%;
+}
+
+.topRight img {
+    vertical-align: middle;
 }
 
 .main {
@@ -200,4 +201,11 @@ p {
 .welcomeCard {
     display: grid;
     grid-template-columns: 90px 1fr;
+}
+
+.trendingAccounts {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+    gap: 8%;
 }
