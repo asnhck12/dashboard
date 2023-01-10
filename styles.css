@@ -2,6 +2,7 @@ html, body {
     height: 100%;
     width: 100%;
     margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -10,32 +11,38 @@ html, body {
     grid-template: 15% repeat(3, 1fr)/25% repeat(3, 1fr);
 }
 
+.icons {
+    place-self: flex-end;
+}
+
 .header {
     background-color: white;
     grid-area:1/2/2/5;
     display: grid;
-    grid-template: 1fr 1fr/ auto auto; 
+    grid-template: 50% 50%; 
     padding: 0;
-    border-bottom: gray solid ;
+    border-bottom: gray solid;    
 }
 
 .upperHeader {
+    overflow: hidden;
     grid-area: 1/1/2/3;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 75% 25%;
     padding-left: 0; 
 }
 
 .lowerHeader {
+    overflow: hidden;
     grid-area: 2/1/3/3;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0; }
+    grid-template-columns: 50% 50%;
+}
 
 
 .sidebar {
     grid-area: 1/1/5/2;
-    background-color: #2563eb;
+    background-color: #0ea5e9;
     color: white;
     padding-left: 7%;
     display: flex;
@@ -49,8 +56,7 @@ html, body {
     grid-template-columns: 30px 1fr;
     padding-left: 3%;
     align-items: center;
-    gap: 1%;
-    
+    gap: 1%;    
 }
 
 .search input {
@@ -64,11 +70,12 @@ html, body {
 
 .topRight {
     place-self: center right;
-    padding-right: 8%;
+    padding-right: 4%;
 }
 
 .topRight img {
     vertical-align: middle;
+    margin-right: 2px;
 }
 
 .main {
@@ -80,18 +87,16 @@ html, body {
 
 .mainRight {
     grid-area: 1/4/5/5;
-    height: 100%;
+    padding-top: 3%;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    gap: 8%;
-    padding: 2%;
-    height: 100%;
+
 }
 
 .mainRightSection {
     display: grid;
     grid-template-rows: 10% 1fr;
-    padding-bottom: 10%;
+    align-items: flex-start;
 }
 
 .main h1 {
@@ -101,16 +106,20 @@ html, body {
 }
 
 button {
-    background-color: blue;
+    background-color: #0ea5e9;
     color: white;
-    width: 90px;
-    height: 30px;
+    width: 80px;
+    height: 35px;
     border-radius: 30px;
+    border-style: solid;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .buttons {
     place-self: center right;
-    padding-right: 5%;
+    padding-right: 4%;
 }
 
 .projects h1 {
@@ -126,28 +135,22 @@ button {
 .projectCards {
     display:grid;
     grid-template: 1fr 1fr 1fr/ auto auto;
-    padding: 3%;
-    gap: 3%;
+    padding:3%;
+    gap: 2%;
 }
 
 .projectCard {
+    display: grid;
+    grid-template-rows: 13% 72% 15%;
     border-left: 8px solid;
     border-color: orange;
 }
 
-.projectCard div {
-    justify-items: bottom;
-}
 
 .projectCard, .announcementCard, .trendingCard {
     background-color: white;
-    padding: 7%;
+    padding: 3%;
     border-radius: 7px;
-}
-
-.icons {
-    justify-items: end;
-
 }
 
 h1 {
@@ -160,12 +163,20 @@ h2 {
     font-size: 15px;
 }
 
+.projectCard p {
+    font-size: 15px;
+}
+
 h3 {
     font-size: 25px;
 }
 
+.username {
+    font-size: 13px;
+}
+
 .lhName {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 600;
 }
 
@@ -189,13 +200,13 @@ p {
 }
 
 .userImage {
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
 }
 
 .userImageLarge {
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 70px;
 }
 
 .welcomeCard {
@@ -208,4 +219,20 @@ p {
     grid-template-columns: 40px 1fr;
     align-items: center;
     gap: 8%;
+}
+
+.trendingAccountsImage {
+    height: 100%;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+}
+
+.trendingUsername {
+    font-weight: 700;
+    font-size: smaller;
+}
+
+.trendingUsersBio {
+    font-size: small;
 }
